@@ -7,7 +7,8 @@ Source/%.spoon/cards.lua: lib/cards.lua
 	cp $< $@
 
 release: all
-	mkdir -p Spoons
+	mkdir -p Spoons docs
+	lua scripts/docs.lua $(SPOONS) > docs/docs.json
 	for s in $(SPOONS); do n=$$(basename $$s); rm -f Spoons/$$n.zip; (cd Source && zip -qr ../Spoons/$$n.zip $$n -x '*.DS_Store'); done
 
 .PHONY: all release
