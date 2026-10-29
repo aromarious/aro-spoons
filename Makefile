@@ -1,4 +1,5 @@
 # カードを表示する部分（lib/cards.lua）を各 Spoon に写し、Spoons/ に zip を作る
+# make release: Spoons/ の zip と docs/docs.json を作り直す。Spoon の中身を変えたら、その Spoon の obj.version を上げてから（SpoonInstall で入れた人はこの版で新しい版かを判断する）
 SPOONS := $(wildcard Source/*.spoon)
 
 all: $(SPOONS:%=%/cards.lua)
