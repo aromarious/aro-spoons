@@ -4,15 +4,19 @@
 
 ## AroCopyCard
 
-クリップボードを監視し、何かコピーされたらカードとして表示する Spoon です。クリップボード内容を全モニタの中央下部に 2 秒間表示します。macOS の通知は使っていないので、集中モード中でも表示します。カードの色はシステムテーマ（ライト／ダーク）に従います。
+クリップボードを監視し、何かコピーされたらカードとして表示する Spoon です。
 
-書式つきの文字は書式つきのまま表示し、画像は小さくして表示します。長いテキストは冒頭のみを表示します。1Password などのパスワード管理アプリからコピーしたときは、中身を伏せます。
-
-出ているカードは alt-shift-n で消せます。
+- クリップボード内容を全モニタの中央下部に 2 秒間表示
+- macOS の通知は使っていないので、集中モード中でも表示
+- カードの色はシステムテーマ（ライト／ダーク）に従う
+- 書式つきの文字は書式つきのまま表示し、画像は小さくして表示
+- 長いテキストは冒頭のみを表示
+- 1Password などのパスワード管理アプリからのコピーは、コピー内容の代わりに「（中身は表示しません）」と表示
+- 出ているカードはクリックか alt-shift-n で消せる
 
 ### インストール方法（手動）
 
-1. ダウンロード: [Spoons/AroCopyCard.spoon.zip](Spoons/AroCopyCard.spoon.zip) をダウンロードして展開します。
+1. ダウンロード: [AroCopyCard.spoon.zip](https://github.com/aromarious/aro-spoons/raw/main/Spoons/AroCopyCard.spoon.zip) をダウンロードして展開します。
 2. ダブルクリック: できた `AroCopyCard.spoon` をダブルクリックすると、AroCopyCard が `~/.hammerspoon/Spoons/` にインストールされます。
 3. 設定ファイルの記述: `~/.hammerspoon/init.lua` に次を書きます。
 
@@ -40,7 +44,7 @@
 
 3. 再読み込み: メニューバーの Hammerspoon のアイコンから「Reload Config」を選ぶと、AroCopyCard がダウンロードされて動き始めます。
 
-一度入ったあとは、再読み込みしても新しい版にはなりません。最新にするときは、Hammerspoon のコンソールで次を実行してから再読み込みします。
+最新にするときは、Hammerspoon のコンソールで次を実行してから再読み込みします。
 
 ```lua
 spoon.SpoonInstall:updateRepo("aro")
@@ -49,7 +53,7 @@ spoon.SpoonInstall:installSpoonFromRepo("AroCopyCard", "aro")
 
 ### 設定
 
-`start()` の前に書きます。どれも省略してかまいません。
+`start()` の前に書きます。全項目省略可
 
 ```lua
 spoon.AroCopyCard.secs = 3                                             -- 出しておく秒数（既定 2）
