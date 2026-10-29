@@ -16,7 +16,7 @@
 
 ### インストール方法（手動）
 
-1. ダウンロード: [Spoons/AroCopyCard.spoon.zip](Spoons/AroCopyCard.spoon.zip) をダウンロードして展開します。
+1. ダウンロード: [AroCopyCard.spoon.zip](https://github.com/aromarious/aro-spoons/raw/main/Spoons/AroCopyCard.spoon.zip) をダウンロードして展開します。
 2. ダブルクリック: できた `AroCopyCard.spoon` をダブルクリックすると、AroCopyCard が `~/.hammerspoon/Spoons/` にインストールされます。
 3. 設定ファイルの記述: `~/.hammerspoon/init.lua` に次を書きます。
 
